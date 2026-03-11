@@ -10,11 +10,11 @@ class RailFenceCipher:
             rails[rail_index].append(char)
             if rail_index == 0:
                 direction = 1
-            elif rail_index = num_rails - 1:
+            elif rail_index == num_rails - 1:
                 direction = -1
-                rail_index += direction 
-            cipher_text = ''.join(''.join(rail) for rail in rails)
-            return cipher_text
+            rail_index += direction 
+        cipher_text = ''.join(''.join(rail) for rail in rails)
+        return cipher_text
     
     def rail_fence_decrypt(self, cipher_text, num_rails):
         rail_lengths = [0] * num_rails
